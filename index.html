@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
+
 <body>
+
 
 <header class="header">
 
@@ -23,14 +25,45 @@
             RAS <span>TRADING</span>
         </a>
 
-        <nav>
+
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-label="Menü öffnen"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+
+        <nav class="main-nav" id="main-nav">
+
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Über uns</a></li>
-                <li><a href="#services">Geschäftsbereiche</a></li>
-                <li><a href="#trade">Import & Export</a></li>
-                <li><a href="#contact">Kontakt</a></li>
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">Über uns</a>
+                </li>
+
+                <li>
+                    <a href="#services">Geschäftsbereiche</a>
+                </li>
+
+                <li>
+                    <a href="#trade">Import & Export</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Kontakt</a>
+                </li>
+
             </ul>
+
         </nav>
 
     </div>
@@ -38,7 +71,9 @@
 </header>
 
 
+
 <main>
+
 
     <!-- HERO -->
 
@@ -60,13 +95,14 @@
                 von Waren verschiedenster Produktbereiche.
             </p>
 
-            <a href="#contact" class="button">
+            <a href="#contact" class="button hero-button">
                 Geschäftsanfrage stellen
             </a>
 
         </div>
 
     </section>
+
 
 
     <!-- ABOUT -->
@@ -102,6 +138,7 @@
     </section>
 
 
+
     <!-- SERVICES -->
 
     <section id="services" class="section light">
@@ -116,53 +153,83 @@
                 Vielfältiger Handel.
             </h2>
 
+
             <div class="cards">
 
-                <div class="card">
-                    <span class="card-number">01</span>
 
-                    <h3>Beauty & Cosmetics</h3>
+                <div class="card">
+
+                    <span class="card-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Beauty & Cosmetics
+                    </h3>
 
                     <p>
                         Handel mit Kosmetik-, Beauty- und Pflegeprodukten.
                     </p>
+
                 </div>
 
 
-                <div class="card">
-                    <span class="card-number">02</span>
 
-                    <h3>Mobile & Electronics</h3>
+                <div class="card">
+
+                    <span class="card-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Mobile & Electronics
+                    </h3>
 
                     <p>
                         Mobilfunk, Zubehör, Unterhaltungselektronik
                         und Elektrogeräte.
                     </p>
+
                 </div>
 
 
-                <div class="card">
-                    <span class="card-number">03</span>
 
-                    <h3>Food & Consumer Goods</h3>
+                <div class="card">
+
+                    <span class="card-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Food & Consumer Goods
+                    </h3>
 
                     <p>
                         Handel mit Lebensmitteln und ausgewählten
                         Konsumgütern.
                     </p>
+
                 </div>
 
 
-                <div class="card">
-                    <span class="card-number">04</span>
 
-                    <h3>General Trading</h3>
+                <div class="card">
+
+                    <span class="card-number">
+                        04
+                    </span>
+
+                    <h3>
+                        General Trading
+                    </h3>
 
                     <p>
                         An- und Verkauf sowie Handel mit Waren
                         verschiedenster Art.
                     </p>
+
                 </div>
+
 
             </div>
 
@@ -171,11 +238,13 @@
     </section>
 
 
+
     <!-- IMPORT & EXPORT -->
 
     <section id="trade" class="trade-section">
 
         <div class="container trade-grid">
+
 
             <div>
 
@@ -190,7 +259,7 @@
             </div>
 
 
-            <div>
+            <div class="trade-text">
 
                 <p>
                     RAS Trading verbindet Produkte, Lieferanten und
@@ -205,9 +274,11 @@
 
             </div>
 
+
         </div>
 
     </section>
+
 
 
     <!-- CONTACT -->
@@ -240,12 +311,15 @@
 
     </section>
 
+
 </main>
+
 
 
 <footer>
 
     <div class="container footer-content">
+
 
         <div>
 
@@ -272,6 +346,7 @@
 
         </div>
 
+
     </div>
 
 
@@ -280,6 +355,41 @@
     </div>
 
 </footer>
+
+
+
+<script>
+
+    const menuToggle = document.getElementById("menu-toggle");
+    const mainNav = document.getElementById("main-nav");
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+
+    menuToggle.addEventListener("click", function () {
+
+        mainNav.classList.toggle("open");
+        menuToggle.classList.toggle("active");
+
+        const isOpen = mainNav.classList.contains("open");
+
+        menuToggle.setAttribute("aria-expanded", isOpen);
+
+    });
+
+
+    navLinks.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            mainNav.classList.remove("open");
+            menuToggle.classList.remove("active");
+            menuToggle.setAttribute("aria-expanded", "false");
+
+        });
+
+    });
+
+</script>
 
 
 </body>
