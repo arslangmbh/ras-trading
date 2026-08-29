@@ -1,6 +1,6 @@
-/* ==========================================
-   BASIC SETTINGS
-========================================== */
+/* =========================================
+   RESET
+========================================= */
 
 * {
     margin: 0;
@@ -17,19 +17,16 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-
     color: #151515;
     background: #ffffff;
-
     line-height: 1.6;
-
     overflow-x: hidden;
 }
 
 
 a {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
 }
 
 
@@ -50,21 +47,17 @@ button {
 
 
 
-/* ==========================================
+/* =========================================
    HEADER
-========================================== */
+========================================= */
 
 .header {
     position: sticky;
-
     top: 0;
-
     width: 100%;
-
     z-index: 1000;
 
-    background: rgba(255, 255, 255, 0.97);
-
+    background: #ffffff;
     border-bottom: 1px solid #eeeeee;
 }
 
@@ -82,13 +75,11 @@ button {
 
 .logo {
     font-size: 23px;
-
     font-weight: 700;
-
     letter-spacing: 2px;
-
     white-space: nowrap;
 
+    position: relative;
     z-index: 1100;
 }
 
@@ -98,6 +89,11 @@ button {
 }
 
 
+
+/* =========================================
+   DESKTOP NAVIGATION
+========================================= */
+
 .main-nav {
     display: block;
 }
@@ -106,7 +102,6 @@ button {
 .nav-links {
     display: flex;
     align-items: center;
-
     gap: 32px;
 
     list-style: none;
@@ -131,9 +126,9 @@ button {
 
 
 
-/* ==========================================
-   MOBILE MENU BUTTON
-========================================== */
+/* =========================================
+   HAMBURGER BUTTON
+========================================= */
 
 .menu-toggle {
     display: none;
@@ -141,19 +136,14 @@ button {
     width: 42px;
     height: 42px;
 
-    padding: 9px;
-
-    border: none;
-
+    border: 0;
     background: transparent;
 
     cursor: pointer;
 
-    flex-direction: column;
-    justify-content: center;
+    padding: 8px;
 
-    gap: 5px;
-
+    position: relative;
     z-index: 1100;
 }
 
@@ -161,14 +151,14 @@ button {
 .menu-toggle span {
     display: block;
 
-    width: 100%;
+    width: 26px;
     height: 2px;
+
+    margin: 5px auto;
 
     background: #151515;
 
-    transition:
-        transform 0.25s ease,
-        opacity 0.25s ease;
+    transition: 0.25s ease;
 }
 
 
@@ -188,9 +178,9 @@ button {
 
 
 
-/* ==========================================
+/* =========================================
    HERO
-========================================== */
+========================================= */
 
 .hero {
     min-height: 520px;
@@ -210,14 +200,12 @@ button {
 
 
 .hero-content {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 0;
 }
 
 
 .eyebrow {
     font-size: 12px;
-
     font-weight: 600;
 
     letter-spacing: 4px;
@@ -255,9 +243,9 @@ button {
 
 
 
-/* ==========================================
+/* =========================================
    BUTTONS
-========================================== */
+========================================= */
 
 .button {
     display: inline-flex;
@@ -267,18 +255,15 @@ button {
 
     min-height: 50px;
 
-    background: #ffffff;
-
-    color: #111111;
-
     padding: 14px 26px;
+
+    background: #ffffff;
+    color: #111111;
 
     font-size: 14px;
     font-weight: 600;
 
-    transition:
-        transform 0.2s ease,
-        opacity 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
 
@@ -289,7 +274,6 @@ button {
 
 .dark-button {
     background: #0b1826;
-
     color: #ffffff;
 
     margin-top: 25px;
@@ -297,9 +281,9 @@ button {
 
 
 
-/* ==========================================
+/* =========================================
    GENERAL SECTIONS
-========================================== */
+========================================= */
 
 .section {
     padding: 110px 0;
@@ -312,17 +296,16 @@ button {
 
 
 .section-label {
-    text-transform: uppercase;
-
     font-size: 12px;
-
     font-weight: 600;
+
+    text-transform: uppercase;
 
     letter-spacing: 3px;
 
-    margin-bottom: 22px;
-
     color: #777777;
+
+    margin-bottom: 22px;
 }
 
 
@@ -348,9 +331,9 @@ button {
 
 
 
-/* ==========================================
+/* =========================================
    CARDS
-========================================== */
+========================================= */
 
 .cards {
     display: grid;
@@ -372,16 +355,12 @@ button {
 
     border-top: 3px solid #0b1826;
 
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+    transition: transform 0.25s ease;
 }
 
 
 .card:hover {
     transform: translateY(-5px);
-
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
 }
 
 
@@ -413,9 +392,9 @@ button {
 
 
 
-/* ==========================================
+/* =========================================
    IMPORT & EXPORT
-========================================== */
+========================================= */
 
 .trade-section {
     background: #0b1826;
@@ -432,8 +411,6 @@ button {
     grid-template-columns: 1fr 1fr;
 
     gap: 100px;
-
-    align-items: start;
 }
 
 
@@ -454,19 +431,9 @@ button {
 
 
 
-/* ==========================================
-   CONTACT
-========================================== */
-
-.contact {
-    text-align: left;
-}
-
-
-
-/* ==========================================
+/* =========================================
    FOOTER
-========================================== */
+========================================= */
 
 footer {
     background: #090f16;
@@ -491,7 +458,6 @@ footer {
 
 .footer-logo {
     font-size: 21px;
-
     font-weight: 700;
 
     letter-spacing: 2px;
@@ -501,9 +467,9 @@ footer {
 
 
 footer p {
-    color: rgba(255, 255, 255, 0.55);
-
     font-size: 14px;
+
+    color: rgba(255, 255, 255, 0.55);
 }
 
 
@@ -526,16 +492,16 @@ footer p {
 
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 
-    color: rgba(255, 255, 255, 0.4);
-
     font-size: 13px;
+
+    color: rgba(255, 255, 255, 0.4);
 }
 
 
 
-/* ==========================================
+/* =========================================
    TABLET
-========================================== */
+========================================= */
 
 @media (max-width: 1000px) {
 
@@ -543,23 +509,18 @@ footer p {
         grid-template-columns: repeat(2, 1fr);
     }
 
-
-    .trade-grid {
-        gap: 60px;
-    }
-
 }
 
 
 
-/* ==========================================
+/* =========================================
    MOBILE
-========================================== */
+========================================= */
 
-@media (max-width: 760px) {
+@media (max-width: 800px) {
 
     html {
-        scroll-padding-top: 66px;
+        scroll-padding-top: 64px;
     }
 
 
@@ -577,54 +538,52 @@ footer p {
 
     .logo {
         font-size: 19px;
-
         letter-spacing: 1.5px;
     }
 
 
     .menu-toggle {
-        display: flex;
+        display: block;
     }
 
 
     .main-nav {
         display: none;
 
-        position: absolute;
+        position: fixed;
 
         top: 64px;
-        left: -6.8%;
+        left: 0;
 
-        width: 113.6%;
+        width: 100%;
 
         background: #ffffff;
 
         border-top: 1px solid #eeeeee;
         border-bottom: 1px solid #eeeeee;
 
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     }
 
 
-    .main-nav.open {
+    .main-nav.active {
         display: block;
     }
 
 
     .nav-links {
-        display: flex;
+        width: 88%;
 
+        margin: 0 auto;
+
+        display: flex;
         flex-direction: column;
 
         align-items: stretch;
 
         gap: 0;
 
-        width: 88%;
-
-        margin: 0 auto;
-
-        padding: 12px 0 18px;
+        padding: 10px 0 16px;
     }
 
 
@@ -638,7 +597,7 @@ footer p {
 
         font-size: 16px;
 
-        padding: 14px 0;
+        padding: 15px 0;
 
         border-bottom: 1px solid #eeeeee;
     }
@@ -655,7 +614,7 @@ footer p {
     .hero {
         min-height: auto;
 
-        padding: 74px 0 78px;
+        padding: 70px 0 75px;
     }
 
 
@@ -674,7 +633,7 @@ footer p {
 
 
     .hero h1 {
-        font-size: clamp(38px, 10.5vw, 52px);
+        font-size: 43px;
 
         line-height: 1.04;
 
@@ -689,14 +648,7 @@ footer p {
 
         line-height: 1.55;
 
-        max-width: 100%;
-
         margin-bottom: 30px;
-    }
-
-
-    .hero-button {
-        min-width: 220px;
     }
 
 
@@ -758,7 +710,7 @@ footer p {
 
 
     .card-number {
-        margin-bottom: 26px;
+        margin-bottom: 25px;
     }
 
 
@@ -767,13 +719,8 @@ footer p {
     }
 
 
-    .card p {
-        font-size: 15px;
-    }
 
-
-
-    /* TRADE */
+    /* IMPORT EXPORT */
 
     .trade-section {
         padding: 75px 0;
@@ -789,23 +736,14 @@ footer p {
 
     .trade-grid p {
         font-size: 17px;
-
-        margin-bottom: 20px;
     }
 
 
 
     /* CONTACT */
 
-    .contact .large-text {
-        margin-bottom: 5px;
-    }
-
-
     .dark-button {
         width: 100%;
-
-        margin-top: 25px;
     }
 
 
@@ -820,7 +758,7 @@ footer p {
     .footer-content {
         flex-direction: column;
 
-        gap: 32px;
+        gap: 30px;
 
         margin-bottom: 38px;
     }
@@ -833,26 +771,17 @@ footer p {
     }
 
 
-    .footer-links a {
-        display: block;
-
-        padding: 3px 0;
-    }
-
-
     .copyright {
         font-size: 12px;
-
-        line-height: 1.5;
     }
 
 }
 
 
 
-/* ==========================================
-   VERY SMALL PHONES
-========================================== */
+/* =========================================
+   SMALL PHONES
+========================================= */
 
 @media (max-width: 390px) {
 
@@ -862,12 +791,12 @@ footer p {
 
 
     .hero {
-        padding: 62px 0 68px;
+        padding: 60px 0 65px;
     }
 
 
     .hero h1 {
-        font-size: 36px;
+        font-size: 35px;
     }
 
 
