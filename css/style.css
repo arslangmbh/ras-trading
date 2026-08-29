@@ -87,7 +87,7 @@ a {
 ================================ */
 
 .hero {
-    min-height: 720px;
+    min-height: 520px;
 
     display: flex;
     align-items: center;
@@ -103,37 +103,37 @@ a {
 }
 
 .hero-content {
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
 .eyebrow {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 4px;
 
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 
     opacity: 0.75;
 }
 
 .hero h1 {
-    font-size: clamp(55px, 8vw, 105px);
-    line-height: 0.98;
-    letter-spacing: -3px;
+    font-size: clamp(42px, 6vw, 78px);
+    line-height: 1.02;
+    letter-spacing: -2px;
 
     max-width: 900px;
 
-    margin-bottom: 35px;
+    margin-bottom: 28px;
 }
 
 .hero-description {
-    font-size: 21px;
+    font-size: 19px;
 
     max-width: 620px;
 
-    color: rgba(255,255,255,0.78);
+    color: rgba(255, 255, 255, 0.78);
 
-    margin-bottom: 45px;
+    margin-bottom: 32px;
 }
 
 
@@ -147,7 +147,7 @@ a {
     background: white;
     color: #111;
 
-    padding: 16px 28px;
+    padding: 15px 26px;
 
     font-size: 14px;
     font-weight: 600;
@@ -219,8 +219,7 @@ a {
 .cards {
     display: grid;
 
-    grid-template-columns:
-        repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
     gap: 20px;
 
@@ -287,13 +286,13 @@ a {
 .trade-grid p {
     font-size: 19px;
 
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
 
     margin-bottom: 25px;
 }
 
 .light-label {
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 
@@ -339,7 +338,7 @@ footer {
 }
 
 footer p {
-    color: rgba(255,255,255,0.55);
+    color: rgba(255, 255, 255, 0.55);
 
     font-size: 14px;
 }
@@ -355,10 +354,9 @@ footer p {
 .copyright {
     padding-top: 25px;
 
-    border-top:
-        1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 
-    color: rgba(255,255,255,0.4);
+    color: rgba(255, 255, 255, 0.4);
 
     font-size: 13px;
 }
@@ -371,8 +369,7 @@ footer p {
 @media (max-width: 900px) {
 
     .cards {
-        grid-template-columns:
-            repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .trade-grid {
@@ -395,11 +392,16 @@ footer p {
     }
 
     .hero {
-        min-height: 620px;
+        min-height: 460px;
     }
 
     .hero h1 {
-        letter-spacing: -2px;
+        font-size: clamp(38px, 11vw, 56px);
+        letter-spacing: -1.5px;
+    }
+
+    .hero-description {
+        font-size: 17px;
     }
 
     .section {
