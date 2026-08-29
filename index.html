@@ -13,9 +13,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-
 <body>
-
 
 <header class="header">
 
@@ -24,7 +22,6 @@
         <a href="#home" class="logo">
             RAS <span>TRADING</span>
         </a>
-
 
         <button
             class="menu-toggle"
@@ -37,31 +34,14 @@
             <span></span>
         </button>
 
-
         <nav class="main-nav" id="main-nav">
 
             <ul class="nav-links">
-
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-
-                <li>
-                    <a href="#about">Über uns</a>
-                </li>
-
-                <li>
-                    <a href="#services">Geschäftsbereiche</a>
-                </li>
-
-                <li>
-                    <a href="#trade">Import & Export</a>
-                </li>
-
-                <li>
-                    <a href="#contact">Kontakt</a>
-                </li>
-
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#services">Geschäftsbereiche</a></li>
+                <li><a href="#trade">Import & Export</a></li>
+                <li><a href="#contact">Kontakt</a></li>
             </ul>
 
         </nav>
@@ -71,9 +51,7 @@
 </header>
 
 
-
 <main>
-
 
     <!-- HERO -->
 
@@ -95,14 +73,13 @@
                 von Waren verschiedenster Produktbereiche.
             </p>
 
-            <a href="#contact" class="button hero-button">
+            <a href="#contact" class="button">
                 Geschäftsanfrage stellen
             </a>
 
         </div>
 
     </section>
-
 
 
     <!-- ABOUT -->
@@ -138,7 +115,6 @@
     </section>
 
 
-
     <!-- SERVICES -->
 
     <section id="services" class="section light">
@@ -153,9 +129,7 @@
                 Vielfältiger Handel.
             </h2>
 
-
             <div class="cards">
-
 
                 <div class="card">
 
@@ -172,7 +146,6 @@
                     </p>
 
                 </div>
-
 
 
                 <div class="card">
@@ -193,7 +166,6 @@
                 </div>
 
 
-
                 <div class="card">
 
                     <span class="card-number">
@@ -210,7 +182,6 @@
                     </p>
 
                 </div>
-
 
 
                 <div class="card">
@@ -230,7 +201,6 @@
 
                 </div>
 
-
             </div>
 
         </div>
@@ -238,13 +208,11 @@
     </section>
 
 
-
     <!-- IMPORT & EXPORT -->
 
     <section id="trade" class="trade-section">
 
         <div class="container trade-grid">
-
 
             <div>
 
@@ -259,7 +227,7 @@
             </div>
 
 
-            <div class="trade-text">
+            <div>
 
                 <p>
                     RAS Trading verbindet Produkte, Lieferanten und
@@ -274,11 +242,9 @@
 
             </div>
 
-
         </div>
 
     </section>
-
 
 
     <!-- CONTACT -->
@@ -311,15 +277,12 @@
 
     </section>
 
-
 </main>
-
 
 
 <footer>
 
     <div class="container footer-content">
-
 
         <div>
 
@@ -346,7 +309,6 @@
 
         </div>
 
-
     </div>
 
 
@@ -357,32 +319,30 @@
 </footer>
 
 
-
 <script>
 
     const menuToggle = document.getElementById("menu-toggle");
     const mainNav = document.getElementById("main-nav");
-    const navLinks = document.querySelectorAll(".nav-links a");
-
 
     menuToggle.addEventListener("click", function () {
 
-        mainNav.classList.toggle("open");
         menuToggle.classList.toggle("active");
+        mainNav.classList.toggle("active");
 
-        const isOpen = mainNav.classList.contains("open");
+        const isOpen = mainNav.classList.contains("active");
 
         menuToggle.setAttribute("aria-expanded", isOpen);
 
     });
 
 
-    navLinks.forEach(function (link) {
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
 
-        link.addEventListener("click", function () {
+        link.addEventListener("click", function() {
 
-            mainNav.classList.remove("open");
             menuToggle.classList.remove("active");
+            mainNav.classList.remove("active");
+
             menuToggle.setAttribute("aria-expanded", "false");
 
         });
